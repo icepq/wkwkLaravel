@@ -19,3 +19,4 @@ yarn-error.log
 /.idea
 /.vscode
 /resources/js/calendar.js
+/resources/views/full_calendar_examples
