@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullCalendar Example</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}" defer></script>
-    <style>
-        #calendar {
-            max-width: 900px;
-            margin: 40px auto;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{{ asset('fullcalendar-6.1.14/dist/index.global.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
 </head>
 <body>
-    <div id="calendar"></div>
+    @extends('layouts.app')
+    @section('content')
+        <div id="calendar"></div>
+    @endsection
+    <script src="{{ asset('js/calendar.js') }}"></script>
 </body>
 </html>

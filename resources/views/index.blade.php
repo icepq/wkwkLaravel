@@ -7,11 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>WKKW</title>
     </head>
-    <body>
+<body>
     @extends('layouts.app')
     
 
-</div>
-
+    index
 </body>
 </html>
