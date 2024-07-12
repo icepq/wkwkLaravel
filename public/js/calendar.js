@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
             editable: true,
             dayMaxEvents: true,
             events: {
-                googleCalendarApiKey: 'AIzaSyDyXvmDlb_CbPqKNXlYnJd6za81ZPBkc2c',
-                googleCalendarId: 'kiiteworld.informal@gmail.com',
+                googleCalendarApiKey: '####',
+                googleCalendarId: '####',
                 className: 'gcal-event' // Google Calendar eventsのクラス名（任意）
             }
         });
