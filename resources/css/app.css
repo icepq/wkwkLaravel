@@ -1,0 +1,3 @@
+.fc-prev-button::after, .fc-next-button::before{
+	content: attr(title);
+}
