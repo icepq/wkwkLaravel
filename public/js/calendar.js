@@ -1,7 +1,3 @@
-// import { Calendar } from '@fullcalendar/core';
-// import dayGridPlugin from '@fullcalendar/daygrid';
-// import googleCalendarPlugin from '@fullcalendar/google-calendar';
-// import 'fullcalendar/main.css'; // Optional if you want to include FullCalendar CSS
 document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
 
@@ -14,13 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             views: {
                 listDay: { buttonText: 'list day' },
-                listWeek: { buttonText: 'list week' }
+                listWeek: {
+                    buttonText: 'list week',
+                    duration: { days: 7 } // 1週間分の予定を表示するように設定
+                }
             },
             initialView: 'listWeek',
-            initialDate: '2023-01-12',
             navLinks: true,
             editable: true,
-            dayMaxEvents: true
+            dayMaxEvents: true,
+            events: {
+                googleCalendarApiKey: 'AIzaSyDyXvmDlb_CbPqKNXlYnJd6za81ZPBkc2c',
+                googleCalendarId: 'kiiteworld.informal@gmail.com',
+                className: 'gcal-event' // Google Calendar eventsのクラス名（任意）
+            }
         });
 
         calendar.render();

@@ -18,5 +18,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/resources/js/calendar.js
 /resources/views/full_calendar_examples
+/public/js/calendar.js
