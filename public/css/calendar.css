@@ -5,14 +5,8 @@ font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 font-size: 14px;
 }
 #calendar {
-    max-height: 400px; /* 必要に応じて高さを変更 */
-    overflow-y: auto; /* 必要に応じてスクロールを有効化 */
-}
-
-.fc-list-day {
-    height: 20px; /* 必要に応じてリストの行の高さを調整 */
-}
-
-.fc-list-event {
-    height: 30px; /* 必要に応じてイベントの行の高さを調整 */
+max-height: 600px; /* 必要に応じて高さを変更 */
+overflow-y: auto; /* 必要に応じてスクロールを有効化 */
+padding-left: 5%;
+padding-right: 5%;
 }
