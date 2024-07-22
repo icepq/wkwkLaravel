@@ -12,6 +12,16 @@
     {{-- 写真スライド --}}
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/pic_slide.css') }}">
+    <style>
+       .slider-item01 {
+            background: url("{{ asset('storage/images/pic01.png') }}") no-repeat center center;
+            background-size: contain;
+       }
+        .slider-item02 {
+            background: url("{{ asset('storage/images/pic02.jpg') }}") no-repeat center center;
+            background-size: contain;
+        }
+    </style>
 </head>
 <body>
     @extends('layouts.app')
@@ -22,7 +32,6 @@
         <ul class="slider">
             <li class="slider-item slider-item01"></li>
             <li class="slider-item slider-item02"></li>
-            <li class="slider-item slider-item03"></li>
         </ul></div>
 
 
