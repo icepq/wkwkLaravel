@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ScheduleController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -20,3 +22,7 @@ Route::get('/discription', function () {
 Route::get('/save', function () {
     return view('save');
 });
+
+Route::get('/thanks', function () {
+    return view('thanks');
+})->name('schedule.thanks');
