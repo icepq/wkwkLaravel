@@ -67,7 +67,24 @@
             </div>
             {{-- ツアー削除 --}}
             <div id="delete" class="area">
-                そのうち作る
+                <div class="container">
+                    <h1>予定を削除する</h1>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfoIM-8hySchOZqCHT6E7K9F31FZEXGdZYJuIhD1_6kuWpsaw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
+                        <div class="form-group">
+                            <label for="account_name">主催者</label>
+                            <input type="text" id="account_name" name="entry.1917763314" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">日付</label>
+                            <input type="date" id="date" name="entry.923580430" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start_time">開始時刻</label>
+                            <input type="time" id="start_time" name="entry.132960366" required>
+                        </div>
+                        <button type="submit">削除する</button>
+                    </form>
+                </div>
             </div>
             {{-- コンセプトツアーの募集Formの募集 --}}
             <div id="concept" class="area">
