@@ -25,4 +25,4 @@ Route::get('/save', function () {
 
 Route::get('/thanks', function () {
     return view('thanks');
-})->name('schedule.thanks');
+});

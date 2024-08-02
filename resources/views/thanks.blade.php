@@ -11,7 +11,7 @@
     @section('content')
     <div class="container">
         <h1>送信完了</h1>
-        <p>予定が正常に追加されました。ありがとうございました。</p>
+        <p>ご協力ありがとめぅ。</p>
         <a href="{{ url('/index') }}">戻る</a>
     </div>
     @endsection
