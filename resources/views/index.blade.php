@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
     {{-- 写真 --}}
     <link rel="stylesheet" href="{{ asset('css/slideshow.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
     @extends('layouts.app')
@@ -37,7 +38,19 @@
             <img class="slide" src="{{ asset('images/pic092.jpg') }}">
         </div>
     </div>
-
+    
+    <div class="box28">
+        <span class="box-title">開催中の大型企画</span>
+        <a href="https://x.com/P1105q_/status/1823410675013837063">アドカレ前月祭</a>
+    </div>
+    <div class="box29">
+        <span class="box-title">ツアーを行う際の曲募集中一覧</span>
+        <a>Comming Sooooooon</a>
+    </div>
+    <div class="box30">
+        <span class="box-title">ツアー代行者募集者</span>
+        <a>Comming Soon</a>
+    </div>
     <div id="calendar"></div>
 
     @endsection
