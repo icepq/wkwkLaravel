@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,40 +8,35 @@
     <script src="{{ asset('fullcalendar-6.1.14/dist/index.global.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.14"></script>
     <link rel="stylesheet" href="{{ asset('css/calendar.css') }}">
-    {{-- 写真スライド --}}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/pic_slide.css') }}">
-    <style>
-       .slider-item01 {
-            background: url("{{ asset('storage/images/pic01.png') }}") no-repeat center center;
-            background-size: contain;
-       }
-        .slider-item02 {
-            background: url("{{ asset('storage/images/pic02.jpg') }}") no-repeat center center;
-            background-size: contain;
-        }
-    </style>
+    {{-- 写真 --}}
+    <link rel="stylesheet" href="{{ asset('css/slideshow.css') }}">
 </head>
 <body>
     @extends('layouts.app')
     @section('content')
 
+    <div class="slide-container">
+        <div class="slide-wrapper">
+            <img class="slide" src="{{ asset('images/pic01.png') }}" >
+            <img class="slide" src="{{ asset('images/pic02.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic03.png') }}" >
+        {{-- </div>
+        <div class="slide-wrapper"> --}}
+            <img class="slide" src="{{ asset('images/pic04.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic05.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic06.png') }}" >
+            <img class="slide" src="{{ asset('images/pic08.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic091.jpg') }}">
+            <img class="slide" src="{{ asset('images/pic092.jpg') }}">
+            <img class="slide" src="{{ asset('images/pic01.png') }}" >
 
-    <div class="wrapper">
-        <ul class="slider">
-            <li class="slider-item slider-item01"></li>
-            <li class="slider-item slider-item02"></li>
-        </ul></div>
+        </div>
 
-
+    </div>
 
     <div id="calendar"></div>
 
-
     @endsection
     <script src="{{ asset('js/calendar.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="{{ asset('js/pic_slide.js') }}"></script>
 </body>
 </html>

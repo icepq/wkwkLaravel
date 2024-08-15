@@ -22,6 +22,9 @@ Route::get('/discription', function () {
 Route::get('/save', function () {
     return view('save');
 });
+Route::get('/test', function () {
+    return view('test');
+});
 
 Route::get('/thanks', function () {
     return view('thanks');
