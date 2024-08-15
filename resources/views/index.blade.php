@@ -20,18 +20,22 @@
             <img class="slide" src="{{ asset('images/pic01.png') }}" >
             <img class="slide" src="{{ asset('images/pic02.jpg') }}" >
             <img class="slide" src="{{ asset('images/pic03.png') }}" >
-        {{-- </div>
-        <div class="slide-wrapper"> --}}
+            <img class="slide" src="{{ asset('images/pic04.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic05.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic06.png') }}" >
+            <img class="slide" src="{{ asset('images/pic08.jpg') }}" >
+            <img class="slide" src="{{ asset('images/pic091.jpg') }}">
+        </div>
+        <div class="slide-wrapper">
+            <img class="slide" src="{{ asset('images/pic092.jpg') }}">
+            <img class="slide" src="{{ asset('images/pic03.png') }}" >
             <img class="slide" src="{{ asset('images/pic04.jpg') }}" >
             <img class="slide" src="{{ asset('images/pic05.jpg') }}" >
             <img class="slide" src="{{ asset('images/pic06.png') }}" >
             <img class="slide" src="{{ asset('images/pic08.jpg') }}" >
             <img class="slide" src="{{ asset('images/pic091.jpg') }}">
             <img class="slide" src="{{ asset('images/pic092.jpg') }}">
-            <img class="slide" src="{{ asset('images/pic01.png') }}" >
-
         </div>
-
     </div>
 
     <div id="calendar"></div>
