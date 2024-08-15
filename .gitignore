@@ -20,3 +20,4 @@ yarn-error.log
 /.vscode
 /public/js/calendar.js
 /resources/views/full_calendar_examples
+/public/images

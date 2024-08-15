@@ -1,0 +1,23 @@
+.slide-container {
+    width: 98%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide-wrapper {
+    display: flex;
+    animation: slide-flow 30s infinite linear 0s both;
+}
+
+.slide {
+    width: 250px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-40%);}
+}
