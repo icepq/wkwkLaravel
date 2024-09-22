@@ -41,7 +41,7 @@
     
     <div class="box28">
         <span class="box-title">開催中の大型企画</span>
-        <a href="https://x.com/P1105q_/status/1823410675013837063">アドカレ前月祭</a>
+        <a href="https://x.com/Ewald_624_music/status/1812111419896467923">KiiteWorld夏ツアー</a>
     </div>
     <div class="box29">
         <span class="box-title">ツアーを行う際の曲募集中一覧</span>
@@ -53,7 +53,7 @@
     </div>
     <div id="calendar"></div>
 
-    @endsection
     <script src="{{ asset('js/calendar.js') }}"></script>
+    @endsection
 </body>
 </html>
