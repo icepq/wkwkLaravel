@@ -7,20 +7,6 @@ use Illuminate\Http\Request;
 
 class BigTourSummarizeController extends Controller
 {
-
-    // 一覧表示
-    // public function index(Request $request)
-    // {
-    //     // 並び替えの処理
-    //     $sort = $request->get('sort', 'created_at');
-    //     $order = $request->get('order', 'asc');
-        
-    //     $tours = BigTourSummarize::where('is_visible', true)
-    //             ->orderBy($sort, $order)
-    //             ->get();
-        
-    //     return view('big_tour', compact('tours'));
-    // }
     public function save(Request $request)
     {
         // 並び替えの処理
@@ -34,11 +20,11 @@ class BigTourSummarizeController extends Controller
         return view('save', compact('tours'));
     }
 
-    // public function save()
-    // {
-    //     $tours = BigTourSummarize::where('is_visible', true)->get();
-    //     return view('save', compact('tours'));
-    // }
+    public function index()
+    {
+        $tours = BigTourSummarize::where('is_visible', true)->get();
+        return view('index', compact('tours'));
+    }
 
 
     // 新規作成の保存
@@ -56,7 +42,6 @@ class BigTourSummarizeController extends Controller
         // フォームのデータを保存
         BigTourSummarize::create($request->all());
 
-        // return redirect()->route('big_tour.index')->with('success', 'Big Tourが正常に保存されました。');
         return redirect()->route('save')->with('success', 'Big Tourが正常に保存されました。');
     }  
 

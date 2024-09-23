@@ -6,7 +6,9 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\BigTourSummarizeController;
 use Illuminate\Http\Request;
 
-
+Route::get('/test', function () {
+    return view('test');
+});
 Route::get('/', function () {
     return view('index');
 });
@@ -32,9 +34,9 @@ Route::get('/thanks', function () {
     return view('thanks');
 });
 
-
-Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
-Route::post('/tours', [TourController::class, 'store'])->name('tours.store');
+// ↓いらないよね？これ
+// Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
+// Route::post('/tours', [TourController::class, 'store'])->name('tours.store');
 
 // 以下は大型企画関連
 // Route::get('/big-tour', [BigTourSummarizeController::class, 'index'])->name('big_tour.index');
@@ -43,3 +45,15 @@ Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name
 
 // 以下は独学
 Route::get('/save', [BigTourSummarizeController::class, 'save'])->name('save');
+Route::get('/index', [BigTourSummarizeController::class, 'index']);
+
+
+
+
+
+// Route::get('/big_tour/#id#', function () {
+//     return view('big_tour.#id#');
+// });
+Route::get('/big_tour/2', function () {
+    return view('big_tour.2');
+});

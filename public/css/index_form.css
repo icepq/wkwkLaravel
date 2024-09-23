@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    text-align: left;
+}
+
+thead th {
+    padding: 6px 9px;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+    padding: 6px 9px;
+    border-bottom: 1px solid #ddd;
+}
+
