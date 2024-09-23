@@ -54,7 +54,7 @@
                     <tr>
                         <td>{{ $tour->name }}</td>
                         <td>{{ $tour->organizer }}</td>
-                        <td><button onclick="location.href='/big_tour/{{ $tour->id }}'">詳細</button></td>
+                        <td><button onclick="location.href='/views/bigyour/{{ $tour->id }}'">詳細</button></td>
                     </tr>
                     @endforeach
                 </tbody>
