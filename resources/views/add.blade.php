@@ -23,8 +23,8 @@
         <ul class="tab">
             <li><a href="#add">ツアー追加</a></li>
             <li><a href="#delete">ツアー削除</a></li>
-            <li><a href="#concept">コンセプト曲</a></li>
-            <li><a href="#change">ツアー代行者募</a></li>
+            {{-- <li><a href="#concept">コンセプト曲</a></li>
+            <li><a href="#change">ツアー代行者募</a></li> --}}
         </ul>
             {{-- ツアー追加 --}}
             <div id="add" class="area">

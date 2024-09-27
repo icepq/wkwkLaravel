@@ -6,9 +6,7 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\BigTourSummarizeController;
 use Illuminate\Http\Request;
 
-Route::get('/test', function () {
-    return view('test');
-});
+
 Route::get('/', function () {
     return view('index');
 });
@@ -27,25 +25,37 @@ Route::get('/discription', function () {
 Route::get('/save', function () {
     return view('save');
 });
-Route::get('/big-tour/form', function () {
-    return view('big_tour_form');
-})->name('big_tour.form');
+
+
+
+// thanks & password page
 Route::get('/thanks', function () {
     return view('thanks');
 });
+Route::get('/manageFile/pass', function () {
+    return view('manageFile/pass');
+});
 
-// ↓いらないよね？これ
-// Route::get('/tours', [TourController::class, 'index'])->name('tours.index');
-// Route::post('/tours', [TourController::class, 'store'])->name('tours.store');
+// bigTourを登録＆非表示にするForm
+Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
+Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+Route::get('/save', [BigTourSummarizeController::class, 'showAll'])->name('save');
+
+
+// Route::get('/save', [BigTourSummarizeController::class, 'save'])->name('save');
+Route::get('/index', [BigTourSummarizeController::class, 'index']);
+
+// Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'hide']);
+Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'manage'])->name('big_tour.manage');
+Route::post('/manageFile/pass/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+// Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+
+
 
 // 以下は大型企画関連
 // Route::get('/big-tour', [BigTourSummarizeController::class, 'index'])->name('big_tour.index');
-Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
-Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
 
-// 以下は独学
-Route::get('/save', [BigTourSummarizeController::class, 'save'])->name('save');
-Route::get('/index', [BigTourSummarizeController::class, 'index']);
+
 
 
 

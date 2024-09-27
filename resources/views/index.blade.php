@@ -45,16 +45,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>作成者</th>
                         <th>企画名</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($tours as $tour)
                     <tr>
-                        <td>{{ $tour->name }}</td>
                         <td>{{ $tour->organizer }}</td>
-                        <td><button onclick="location.href='/big_tour/{{ $tour->id }}'">詳細</button></td>
+                        <td><button onclick="location.href='/big_tour/{{ $tour->id }}'" >詳細</button></td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Big Tour 募集フォーム</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/manageFile.css') }}">
+
 </head>
 <body>
-    <h1>Big Tour 募集フォーム</h1>
+    @extends('layouts.app')
+    @section('content')
+    
+    <h1>企画募集</h1>
 
     <!-- フォーム -->
     <form action="{{ route('big_tour.store') }}" method="POST">
@@ -37,6 +44,24 @@
 
         <button type="submit">送信</button>
     </form>
+
+
+    <h1>企画 非表示</h1>
+    <!-- 非表示フォーム -->
+    <form method="POST" action="{{ route('big_tour.hide') }}">
+        @csrf
+        <label>非表示にする企画名:</label>
+        <select name="organizer">
+            @foreach ($tours as $tour)
+            <option value="{{ $tour->organizer }}">{{ $tour->organizer }}</option>
+            @endforeach
+        </select>
+        <br><button type="submit">非表示にする</button>
+    </form>
+    
+
+
+    @endsection
 
 </body>
 </html>
