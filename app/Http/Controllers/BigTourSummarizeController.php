@@ -45,7 +45,12 @@ class BigTourSummarizeController extends Controller
         return redirect()->route('save')->with('success', 'Big Tourが正常に保存されました。');
     }  
 
-    // 非表示にする
+    public function manage()
+    {
+        $tours = BigTourSummarize::where('is_visible', true)->get();
+        return view('manageFile.pass', compact('tours'));
+    }
+
     public function hide(Request $request)
     {
         $tour = BigTourSummarize::where('organizer', $request->get('organizer'))->first();
@@ -53,6 +58,15 @@ class BigTourSummarizeController extends Controller
             $tour->is_visible = false;
             $tour->save();
         }
-        return redirect()->route('big_tour.index');
+        return redirect()->route('big_tour.manage')->with('success', '缶');
     }
+
+    public function showAll()
+    {
+        // すべてのデータを取得（is_visible に関わらず）
+        $tours = BigTourSummarize::all();
+        return view('save', compact('tours'));
+    }
+
+
 }
