@@ -71,6 +71,9 @@
     </div>
     <div id="calendar"></div>
 
+    <button onclick="location.href='/manageFile/pass'" >
+    <img class="slide" src="{{ asset('images/aikon.jpg') }}">
+    </button>
     <script src="{{ asset('js/calendar.js') }}"></script>
     @endsection
 </body>

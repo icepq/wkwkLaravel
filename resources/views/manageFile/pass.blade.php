@@ -25,11 +25,11 @@
         <label for="summary">概要:</label><br>
         <textarea id="summary" name="summary" maxlength="128" required></textarea><br><br>
 
-        <label for="day">開催期間:</label><br>
-        <input type="text" id="day" name="day" maxlength="132" required><br><br>
+        <label for="day">開幕日:</label><br>
+        <input type="date" id="day" name="day" required><br><br>
 
         <label for="url">Xでの告知URL:</label><br>
-        <input type="url" id="url" name="url" maxlength="128" required><br><br>
+        <input type="url" id="url" name="url" maxlength="128"><br><br>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -46,20 +46,18 @@
     </form>
 
 
-    <h1>企画 非表示</h1>
+    {{-- <h1>企画 非表示</h1> --}}
     <!-- 非表示フォーム -->
-    <form method="POST" action="{{ route('big_tour.hide') }}">
+    {{-- <form action="{{ route('big_tour.hide') }}" method="POST">
         @csrf
         <label>非表示にする企画名:</label>
         <select name="organizer">
-            @foreach ($tours as $tour)
+        @foreach ($tour)
             <option value="{{ $tour->organizer }}">{{ $tour->organizer }}</option>
-            @endforeach
+        @endforeach
         </select>
         <br><button type="submit">非表示にする</button>
-    </form>
-    
-
+    </form>     --}}
 
     @endsection
 
