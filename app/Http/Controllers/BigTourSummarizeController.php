@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class BigTourSummarizeController extends Controller
 {
+    public function create()
+    {
+        return view('manageFile.pass');
+    }
+
     public function save(Request $request)
     {
         // 並び替えの処理
@@ -26,24 +31,22 @@ class BigTourSummarizeController extends Controller
         return view('index', compact('tours'));
     }
 
-
-    // 新規作成の保存
     public function store(Request $request)
     {
-            // バリデーション
+        // バリデーション
         $request->validate([
             'name' => 'required|string|max:16',
             'organizer' => 'required|string|max:32',
             'summary' => 'required|string|max:128',
-            'day' => 'required|string|max:132',
-            'url' => 'required|url|max:128',
+            'day' => 'required|date',
+            'url' => 'nullable|url|max:128',
         ]);
 
-        // フォームのデータを保存
+        // データの保存
         BigTourSummarize::create($request->all());
 
-        return redirect()->route('save')->with('success', 'Big Tourが正常に保存されました。');
-    }  
+        return redirect()->route('big_tour.create')->with('success', '募集が完了しました！');
+    }
 
     public function manage()
     {
@@ -58,7 +61,7 @@ class BigTourSummarizeController extends Controller
             $tour->is_visible = false;
             $tour->save();
         }
-        return redirect()->route('big_tour.manage')->with('success', '缶');
+        return redirect()->route('big_tour.hide')->with('success', '缶');
     }
 
     public function showAll()

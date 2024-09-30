@@ -18,8 +18,7 @@
     <h2>今までの大型企画 一覧</h2>
     <font color="red">詳細ボタンはまだ押せないよん</font><br><br>
         <!-- 並び替えフォーム -->
-    <form method="GET" action="{{ route('save') }}">
-        {{-- <label>Sort by:</label> --}}
+    {{-- <form method="GET" action="{{ route('save') }}">
         <label>　　　　  </label>
         <select name="sort">
             <option value="name">作成者</option>
@@ -30,7 +29,7 @@
             <option value="desc">降順</option>
         </select>
         <button type="submit">変更</button>
-    </form>
+    </form> --}}
 
 
     <table>

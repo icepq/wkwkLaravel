@@ -40,25 +40,14 @@ Route::get('/manageFile/pass', function () {
 Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
 Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
 Route::get('/save', [BigTourSummarizeController::class, 'showAll'])->name('save');
-
-
-// Route::get('/save', [BigTourSummarizeController::class, 'save'])->name('save');
 Route::get('/index', [BigTourSummarizeController::class, 'index']);
 
-// Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'hide']);
-Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'manage'])->name('big_tour.manage');
-Route::post('/manageFile/pass/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
-// Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+// Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'manage'])->name('big_tour.manage');
+// Route::post('/manageFile/pass/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'create'])->name('big_tour.create');
+Route::post('/manageFile/pass', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
 
-
-
-// 以下は大型企画関連
-// Route::get('/big-tour', [BigTourSummarizeController::class, 'index'])->name('big_tour.index');
-
-
-
-
-
+Route::post('/manageFile/pass', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
 
 
 // Route::get('/big_tour/#id#', function () {
