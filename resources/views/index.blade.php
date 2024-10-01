@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
+    @extends('layouts.footer')
     @extends('layouts.app')
     @section('content')
 
@@ -53,7 +54,8 @@
                     @foreach ($tours as $tour)
                     <tr>
                         <td>{{ $tour->organizer }}</td>
-                        <td><button onclick="location.href='/big_tour/{{ $tour->id }}'" >詳細</button></td>
+                        <td><button onclick="location.href='{{ $tour->url }}'" >詳細</button></td>
+                        {{-- <td><button onclick="location.href='/big_tour/{{ $tour->id }}'" >詳細</button></td> --}}
                     </tr>
                     @endforeach
                 </tbody>
@@ -70,10 +72,6 @@
         <a>Comming Soon</a>
     </div>
     <div id="calendar"></div>
-
-    <button onclick="location.href='/manageFile/pass'" >
-    <img class="slide" src="{{ asset('images/aikon.jpg') }}">
-    </button>
     <script src="{{ asset('js/calendar.js') }}"></script>
     @endsection
 </body>

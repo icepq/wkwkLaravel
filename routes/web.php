@@ -6,6 +6,10 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\BigTourSummarizeController;
 use Illuminate\Http\Request;
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 
 Route::get('/', function () {
     return view('index');
@@ -35,12 +39,17 @@ Route::get('/thanks', function () {
 Route::get('/manageFile/pass', function () {
     return view('manageFile/pass');
 });
+Route::get('/manageFile/pass', function () {
+    return view('wkserver/public/manageFile/pass');
+});
 
 // bigTourを登録＆非表示にするForm
 Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
 Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
 Route::get('/save', [BigTourSummarizeController::class, 'showAll'])->name('save');
 Route::get('/index', [BigTourSummarizeController::class, 'index']);
+Route::get('/', [BigTourSummarizeController::class, 'index']);
+
 
 // Route::get('/manageFile/pass', [BigTourSummarizeController::class, 'manage'])->name('big_tour.manage');
 // Route::post('/manageFile/pass/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');

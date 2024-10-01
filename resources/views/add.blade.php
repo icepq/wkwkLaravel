@@ -30,6 +30,8 @@
             <div id="add" class="area">
                 <div class="container">
                     <h1>予定を追加する</h1>
+                    <h6 style="color:red;">お手数をおかけしますが、希望の所要時間が45分の場合は
+                        <a href="https://wakuwaki.sakura.ne.jp/HTML/Addtuar.php">こちら</a>のFormからお願いいたします</h6>
                     <form action="https://docs.google.com/forms/d/e/1FAIpQLSfXpILrFamfJlp7NMh0kus1zDu03DSu8hzD-HUlWSVaEpP1xQ/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="c-form">
                         <div class="form-group">
                             <label for="account_name">アカウント名</label>
@@ -51,7 +53,7 @@
                             <label for="duration">所要時間</label>
                             <div>
                                 <label><input type="radio" name="entry.217295774" value="30分" required> 30分</label>
-                                <label><input type="radio" name="entry.217295774" value="45分" required> 45分</label>
+                                {{-- <label><input type="radio" name="entry.217295774" value="45分" required> 45分</label> --}}
                                 <label><input type="radio" name="entry.217295774" value="60分" required> 60分</label>
                                 <label><input type="radio" name="entry.217295774" value="90分" required> 90分</label>
                                 <label><input type="radio" name="entry.217295774" value="120分以上" required> 120分以上</label>

@@ -11,6 +11,18 @@
     @extends('layouts.app')
     @section('content')
     
+    <script>
+        window.onload = function() {
+            var password = prompt("〇〇〇〇じゃなくたわくわき:");
+
+            if (password !== 'わきわく') {
+                alert('パスワードが違います。');
+                window.location.href = '../';  // パスワードが違う場合、ホームページなどにリダイレクト
+            }
+        };
+    </script>
+
+
     <h1>企画募集</h1>
 
     <!-- フォーム -->
