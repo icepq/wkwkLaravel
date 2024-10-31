@@ -35,26 +35,20 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>作成者</th>
                 <th>企画名</th>
-                <th>概要</th>
-                <th>開催期間</th>
+                <th>開幕日</th>
                 <th>URL</th>
-                <th>表示/非表示</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach ($tours as $tour)
             <tr>
-                <td>{{ $tour->id }}</td>
                 <td>{{ $tour->name }}</td>
                 <td>{{ $tour->organizer }}</td>
-                <td>{{ $tour->summary }}</td>
                 <td>{{ $tour->day }}</td>
                 <td><a href="{{ $tour->url }}">{{ $tour->url }}</a></td>
-                <td>{{ $tour->is_visible ? '表示中' : '非表示' }}</td>
                 <td><button onclick="location.href='/big_tour/{{ $tour->id }}'" >詳細</button></td>
             </tr>
             @endforeach

@@ -69,7 +69,7 @@ nav {
     display: block;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .nav {
         display: none;
         flex-direction: column;
@@ -83,4 +83,4 @@ nav {
     .nav-open {
         display: flex;
     }
-}
+} */
