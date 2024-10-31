@@ -41,7 +41,7 @@
         </div>
     </div>
     
-    <div class="box28">
+    <div class="box29">
         <span class="box-title">開催中の大型企画</span>
             <table>
                 <thead>
@@ -63,14 +63,14 @@
 
 
     </div>
-    <div class="box29">
+    <div class="box28">
         <span class="box-title">ツアーを行う際の曲募集中一覧</span>
         <a>Comming Sooooooon</a>
     </div>
-    <div class="box30">
+    {{-- <div class="box30">
         <span class="box-title">ツアー代行者募集者</span>
         <a>Comming Soon</a>
-    </div>
+    </div> --}}
     <div id="calendar"></div>
     <script src="{{ asset('js/calendar.js') }}"></script>
     @endsection

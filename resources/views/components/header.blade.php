@@ -10,11 +10,11 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav no-search" id="nav-links">
-                <li><a href="{{ url('/discription') }}">Discription</a></li>
-                <li><a href="{{ url('/index') }}">Index</a></li>
-                <li><a href="{{ url('/calendar') }}">Calendar</a></li>
-                <li><a href="{{ url('/save') }}">Save</a></li>
-                <li><a href="{{ url('/add') }}">Add</a></li>
+                {{-- <li><a href="{{ url('/discription') }}">Discription</a></li> --}}
+                {{-- <li><a href="{{ url('/index') }}">Index</a></li> --}}
+                <li><a href="{{ url('/calendar') }}">カレンダー</a></li>
+                {{-- <li><a href="{{ url('/save') }}">Save</a></li> --}}
+                <li><a href="{{ url('/add') }}">追加</a></li>
             </ul>
         </div>
     </nav>
