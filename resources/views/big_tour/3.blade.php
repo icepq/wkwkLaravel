@@ -15,23 +15,6 @@
 
     <br><br><a>---------------------------------------------------------------------------------</a><br><br>
 
-    <h2>Details</h2>
-    <ul>
-        @foreach($details as $detail)
-            <li>
-                <strong>Name:</strong> {{ $detail->name }}<br>
-                <strong>Title:</strong> {{ $detail->title }}<br>
-                <strong>Date:</strong> {{ $detail->date }}<br>
-                <strong>Time:</strong> {{ $detail->time }}<br>
-                <strong>URL:</strong> <a href="{{ $detail->url }}">{{ $detail->url }}</a><br>
-                <strong>Comment:</strong> {{ $detail->comment }}<br>
-            </li>
-        @endforeach
-    </ul>
-
-    <br><br><a>---------------------------------------------------------------------------------</a><br><br>
-
-
 @if(session('success'))
     <div>{{ session('success') }}</div>
 @endif
@@ -58,6 +41,39 @@
 
     <button type="submit">Add Details</button>
 </form>
+
+
+    <br><br><a>---------------------------------------------------------------------------------</a><br><br>
+
+    
+@if($details->isEmpty())
+    <p>詳細データがありません。</p>
+@else
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>URL</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($details as $detail)
+                <tr>
+                    <td>{{ $detail->name }}</td>
+                    <td>{{ $detail->title }}</td>
+                    <td>{{ $detail->date }}</td>
+                    <td>{{ $detail->time }}</td>
+                    <td><a href="{{ $detail->url }}">{{ $detail->url }}</a></td>
+                    <td>{{ $detail->comment }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+@endif
 
 </body>
 </html>

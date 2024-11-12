@@ -67,5 +67,6 @@ Route::post('/manageFile/pass', [BigTourSummarizeController::class, 'hide'])->na
         return view('big_tour.2');
     });
     
-    
-    Route::get('/big_tour/{id}', [BigTourController::class, 'show']);
+
+Route::get('/big_tour/{id}', [BigTourController::class, 'show'])->name('big_tour.show');
+Route::post('/big_tour/{id}/details', [BigTourController::class, 'storeDetail'])->name('big_tour.storeDetail');

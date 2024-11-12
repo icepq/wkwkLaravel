@@ -15,23 +15,6 @@
 
     <br><br><a>---------------------------------------------------------------------------------</a><br><br>
 
-    <h2>Details</h2>
-    <ul>
-        @foreach($details as $detail)
-            <li>
-                <strong>Name:</strong> {{ $detail->name }}<br>
-                <strong>Title:</strong> {{ $detail->title }}<br>
-                <strong>Date:</strong> {{ $detail->date }}<br>
-                <strong>Time:</strong> {{ $detail->time }}<br>
-                <strong>URL:</strong> <a href="{{ $detail->url }}">{{ $detail->url }}</a><br>
-                <strong>Comment:</strong> {{ $detail->comment }}<br>
-            </li>
-        @endforeach
-    </ul>
-
-    <br><br><a>---------------------------------------------------------------------------------</a><br><br>
-
-
 @if(session('success'))
     <div>{{ session('success') }}</div>
 @endif
@@ -58,6 +41,24 @@
 
     <button type="submit">Add Details</button>
 </form>
+
+
+    <br><br><a>---------------------------------------------------------------------------------</a><br><br>
+
+    <h2>Details</h2>
+    <ul>
+        @foreach($details as $detail)
+            <li>
+                <strong>Name:</strong> {{ $detail->name }}<br>
+                <strong>Title:</strong> {{ $detail->title }}<br>
+                <strong>Date:</strong> {{ $detail->date }}<br>
+                <strong>Time:</strong> {{ $detail->time }}<br>
+                <strong>URL:</strong> <a href="{{ $detail->url }}">{{ $detail->url }}</a><br>
+                <strong>Comment:</strong> {{ $detail->comment }}<br>
+            </li>
+        @endforeach
+    </ul>
+
 
 </body>
 </html>
