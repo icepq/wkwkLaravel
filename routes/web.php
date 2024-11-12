@@ -5,6 +5,7 @@ use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\BigTourSummarizeController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\BigTourController;
 
 Route::get('/test', function () {
     return view('test');
@@ -44,8 +45,8 @@ Route::get('/manageFile/pass', function () {
 });
 
 // bigTourを登録＆非表示にするForm
-Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
-Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
+// Route::post('/big-tour', [BigTourSummarizeController::class, 'store'])->name('big_tour.store');
+// Route::post('/big-tour/hide', [BigTourSummarizeController::class, 'hide'])->name('big_tour.hide');
 Route::get('/save', [BigTourSummarizeController::class, 'showAll'])->name('save');
 Route::get('/index', [BigTourSummarizeController::class, 'index']);
 Route::get('/', [BigTourSummarizeController::class, 'index']);
@@ -60,8 +61,11 @@ Route::post('/manageFile/pass', [BigTourSummarizeController::class, 'hide'])->na
 
 
 // Route::get('/big_tour/#id#', function () {
-//     return view('big_tour.#id#');
-// });
-Route::get('/big_tour/2', function () {
-    return view('big_tour.2');
-});
+    //     return view('big_tour.#id#');
+    // });
+    Route::get('/big_tour/2', function () {
+        return view('big_tour.2');
+    });
+    
+    
+    Route::get('/big_tour/{id}', [BigTourController::class, 'show']);
